@@ -22,3 +22,46 @@ function GreetingComponent() {
 
 export default GreetingComponent;
 ```
+
+
+## Part 2: Code
+
+```js
+import React, { useState } from 'react';
+
+function SGreetingComponent() {
+    const [greetingMessage, setGreetingMessage] = useState("Hello, User!");
+    
+    function changeGreeting() {
+        setGreetingMessage("Welcome, User!");
+    }
+    
+    return (
+        <div>
+            <h1>Experimenting state variable</h1>
+            <p>{greetingMessage}</p>
+            <button onClick={changeGreeting}>Change Greeting</button>
+        </div>
+    );
+}
+
+export default SGreetingComponent;
+```
+
+## Try executing both the code by calling them in App.js
+
+```js
+import VGreetingComponent from './components/variable'
+import SGreetingComponent from './components/state';
+function App(){
+return(
+      <div>
+        <VGreetingComponent />
+        <SGreetingComponent />
+      </div>
+)
+
+}
+
+export default App;
+```
