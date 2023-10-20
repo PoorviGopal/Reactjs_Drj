@@ -3,24 +3,24 @@
 ```js
 import React from 'react';
 
-function GreetingComponent() {
+function VGreetingComponent() {
     let greetingMessage = "Hello, User!";
     
     function changeGreeting() {
         greetingMessage = "Welcome, User!";
-        // here without document.write() it is not possibe to update the message directly in the UI.
         document.write(greetingMessage)
     }
     
     return (
         <div>
+            <h1>Experimenting Regular variable</h1>
             <p>{greetingMessage}</p>
             <button onClick={changeGreeting}>Change Greeting</button>
         </div>
     );
 }
 
-export default GreetingComponent;
+export default VGreetingComponent;
 ```
 
 
